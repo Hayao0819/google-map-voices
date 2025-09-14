@@ -1,0 +1,12 @@
+[project]
+name = "google-map-voices"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "voicevox-core",
+]
+
+[tool.uv.sources]
+voicevox-core = { url = "https://github.com/VOICEVOX/voicevox_core/releases/download/0.16.1/voicevox_core-0.16.1-cp310-abi3-manylinux_2_34_x86_64.whl" }

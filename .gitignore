@@ -1,0 +1,5 @@
+.mypy_cache
+.venv
+.DS_Store
+__pycache__
+
