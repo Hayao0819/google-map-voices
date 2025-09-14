@@ -10,5 +10,5 @@ cd "$temp_dir" || exit 1
 
 curl -sSfL https://github.com/VOICEVOX/voicevox_core/releases/latest/download/${binary} -o download
 chmod +x download
-./download -o "${script_dir}/../core/voicevox_core" --exclude "c-api"
+./download -o "${script_dir}/../../core/voicevox_core" --exclude "c-api"
 
