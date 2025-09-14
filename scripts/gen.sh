@@ -15,6 +15,8 @@ export GMV_CORE_DIR="${script_dir}/../core"
 source "$GMV_CORE_DIR/voicevox.sh"
 # shellcheck source=/dev/null
 source "$GMV_CORE_DIR/kiritan.sh"
+# shellcheck source=/dev/null
+source "$GMV_CORE_DIR/ttchan.sh"
 
 voices_json_path="$script_dir/../data/voices.json"
 
@@ -30,9 +32,18 @@ for voice in "${voices[@]}"; do
 		continue
 	fi
 
-	output_path="$output_dir/${filename}.wav"
-	mkdir -p "$(dirname "$output_path")"
+	{
+		output_path="$output_dir/kiritan/${filename}.wav"
+		mkdir -p "$(dirname "$output_path")"
 
-	echo "Generating id $id: $text"
-	kiritan "$text" "$output_path"
+		echo "Generating id $id: $text (kiritan)"
+		kiritan "$text" "$output_path"
+	} &
+	{
+		output_path="$output_dir/ttchan/${filename}.wav"
+		mkdir -p "$(dirname "$output_path")"
+
+		echo "Generating id $id: $text (ttchan)"
+		ttchan "$text" "$output_path"
+	}
 done

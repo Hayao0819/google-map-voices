@@ -21,6 +21,7 @@ class Args:
     text: str
     out: Path
     style_id: int
+    speed_scale:float = 1.0
 
     @staticmethod
     def parse_args() -> "Args":
@@ -64,6 +65,12 @@ class Args:
             type=int,
             help="話者IDを指定",
         )
+        argparser.add_argument(
+            "--speed-scale",
+            default=1.0,
+            type=float,
+            help="話速の倍率を指定 (default: 1.0)",
+        )
         args = argparser.parse_args()
         return Args(
             args.mode,
@@ -73,6 +80,7 @@ class Args:
             args.text,
             args.out,
             args.style_id,
+            args.speed_scale,
         )
 
 
@@ -107,6 +115,8 @@ def main() -> None:
 
     logger.info("%s", f"Creating an AudioQuery from {args.text!r}")
     audio_query = synthesizer.create_audio_query(args.text, args.style_id)
+    audio_query.speed_scale = args.speed_scale
+    logger.debug("%s", f"{audio_query=}")
 
     logger.info("%s", f"Synthesizing with {audio_query}")
     wav = synthesizer.synthesis(audio_query, args.style_id)
