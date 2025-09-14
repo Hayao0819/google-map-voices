@@ -193,87 +193,87 @@
         {
             "filename": "IN_300_YARDS",
             "id": 39,
-            "text": ""
+            "text": "およそ300ヤード先"
         },
         {
             "filename": "IN_3_KILOMETERS",
             "id": 40,
-            "text": ""
+            "text": "およそ3キロ先"
         },
         {
             "filename": "IN_3_MILES",
             "id": 41,
-            "text": ""
+            "text": "およそ3マイル先"
         },
         {
             "filename": "IN_400_FEET",
             "id": 42,
-            "text": ""
+            "text": "およそ400フィート先"
         },
         {
             "filename": "IN_400_METERS",
             "id": 43,
-            "text": ""
+            "text": "およそ400メートル先"
         },
         {
             "filename": "IN_400_YARDS",
             "id": 44,
-            "text": ""
+            "text": "およそ400ヤード先"
         },
         {
             "filename": "IN_500_FEET",
             "id": 45,
-            "text": ""
+            "text": "およそ500フィート先"
         },
         {
             "filename": "IN_500_METERS",
             "id": 46,
-            "text": ""
+            "text": "およそ500メートル先"
         },
         {
             "filename": "IN_50_FEET",
             "id": 47,
-            "text": ""
+            "text": "およそ50フィート先"
         },
         {
             "filename": "IN_50_METERS",
             "id": 48,
-            "text": ""
+            "text": "50メートル先"
         },
         {
             "filename": "IN_50_YARDS",
             "id": 49,
-            "text": ""
+            "text": "およそ50ヤード先"
         },
         {
             "filename": "IN_600_FEET",
             "id": 50,
-            "text": ""
+            "text": "およそ600フィート先"
         },
         {
             "filename": "IN_600_METERS",
             "id": 51,
-            "text": ""
+            "text": "およそ600メートル先"
         },
         {
             "filename": "IN_800_FEET",
             "id": 52,
-            "text": ""
+            "text": "およそ800フィート先"
         },
         {
             "filename": "IN_800_METERS",
             "id": 53,
-            "text": ""
+            "text": "およそ800メートル先"
         },
         {
             "filename": "IN_A_HALF_MILE",
             "id": 54,
-            "text": ""
+            "text": "およそ0.5マイル先"
         },
         {
             "filename": "IN_A_QUARTER_MILE",
             "id": 55,
-            "text": ""
+            "text": "およそ0.25マイル先"
         },
         {
             "filename": "IN_THREE_QUARTERS_OF_A_MILE",
