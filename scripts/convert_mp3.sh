@@ -20,5 +20,6 @@ for wav_file in "$input_dir"/*.wav; do
 	filename=$(basename "$wav_file" .wav)
 	output_file="$output_dir/${filename}.mp3"
 	echo "Converting $wav_file to $output_file"
-	ffmpeg -i "$wav_file" -vn -ac 2 -ar 44100 -ab 256k -acodec libmp3lame -f mp3 "$output_file"
+	ffmpeg -i "$wav_file" -vn -ac 2 -ar 44100 -ab 256k -acodec libmp3lame -f mp3 "$output_file" &
 done
+wait

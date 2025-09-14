@@ -20,7 +20,7 @@ source "$GMV_CORE_DIR/ttchan.sh"
 
 voices_json_path="$script_dir/../data/voices.json"
 
-readarray -t voices < <(jq -c '.voices[]' "$voices_json_path")
+readarray -t voices < <(jq -c '.voices.base[]' "$voices_json_path")
 
 for voice in "${voices[@]}"; do
 	filename=$(echo "$voice" | jq -r '.filename')
@@ -38,12 +38,13 @@ for voice in "${voices[@]}"; do
 
 		echo "Generating id $id: $text (kiritan)"
 		kiritan "$text" "$output_path"
-	} &
+	} 
 	{
 		output_path="$output_dir/ttchan/${filename}.wav"
 		mkdir -p "$(dirname "$output_path")"
 
 		echo "Generating id $id: $text (ttchan)"
 		ttchan "$text" "$output_path"
-	}
+	} 
 done
+wait
