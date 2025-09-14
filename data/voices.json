@@ -344,62 +344,62 @@
             {
                 "filename": "SHARP_RIGHT",
                 "id": 69,
-                "text": ""
+                "text": "大きく右方向です。"
             },
             {
                 "filename": "SLIGHT_LEFT",
                 "id": 70,
-                "text": ""
+                "text": "斜め左方向です。"
             },
             {
                 "filename": "SLIGHT_LEFT_ONTO_THE_RAMP",
                 "id": 71,
-                "text": ""
+                "text": "斜め左方向、入口です。"
             },
             {
                 "filename": "SLIGHT_RIGHT",
                 "id": 72,
-                "text": ""
+                "text": "斜め右方向です。"
             },
             {
                 "filename": "SLIGHT_RIGHT_ONTO_RAMP",
                 "id": 73,
-                "text": ""
+                "text": "斜め右方向、入口です。"
             },
             {
                 "filename": "TAKE_THE_INTERCHANGE",
                 "id": 74,
-                "text": ""
+                "text": "ジャンクションです。"
             },
             {
                 "filename": "TAKE_THE_INTERCHANGE_ON_THE_LEFT",
                 "id": 75,
-                "text": ""
+                "text": "左方向、ジャンクションです。"
             },
             {
                 "filename": "TAKE_THE_EXIT",
                 "id": 76,
-                "text": ""
+                "text": "出口です。"
             },
             {
                 "filename": "TAKE_THE_EXIT_ON_THE_LEFT",
                 "id": 77,
-                "text": ""
+                "text": "左方向、出口です。"
             },
             {
                 "filename": "TAKE_THE_EXIT_ON_THE_RIGHT",
                 "id": 78,
-                "text": ""
+                "text": "右方向、出口です。"
             },
             {
                 "filename": "TAKE_THE_FERRY",
                 "id": 79,
-                "text": ""
+                "text": "フェリーに乗ります。"
             },
             {
                 "filename": "TAKE_THE_INTERCHANGE_ON_THE_RIGHT",
                 "id": 80,
-                "text": ""
+                "text": "右方向、ジャンクションです。"
             },
             {
                 "filename": "TAKE_THE_RAMP",
