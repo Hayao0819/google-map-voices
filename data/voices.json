@@ -1,444 +1,450 @@
 {
-    "voices": [
-        {
-            "filename": "ARRIVED",
-            "id": 1,
-            "text": "目的地に到着しました。おつかれさまでした。"
-        },
-        {
-            "filename": "CONTINUE_ON_THE_RAMP",
-            "id": 2,
-            "text": "分岐です。"
-        },
-        {
-            "filename": "CONTINUE_STRAIGHT",
-            "id": 3,
-            "text": "直進です。"
-        },
-        {
-            "filename": "DATA_LOST",
-            "id": 4,
-            "text": "データ接続が失われました。"
-        },
-        {
-            "filename": "DESTINATION_ON_LEFT",
-            "id": 5,
-            "text": "目的地は左側です。お疲れ様でした。"
-        },
-        {
-            "filename": "DESTINATION_ON_RIGHT",
-            "id": 6,
-            "text": "目的地は右側です。お疲れ様でした。"
-        },
-        {
-            "filename": "DESTINATION_WILL_BE_ON_LEFT",
-            "id": 7,
-            "text": "目的地は左側です。"
-        },
-        {
-            "filename": "DESTINATION_WILL_BE_ON_RIGHT",
-            "id": 8,
-            "text": "目的地は右側です。"
-        },
-        {
-            "filename": "ENTER_THE_ROUNDABOUT",
-            "id": 9,
-            "text": "ロータリー入口です。"
-        },
-        {
-            "filename": "EXIT_THE_ROUNDABOUT",
-            "id": 10,
-            "text": "ロータリー出口です。"
-        },
-        {
-            "filename": "GENERIC_CONTINUE",
-            "id": 11,
-            "text": "しばらく道なりです。"
-        },
-        {
-            "filename": "GPS_LOST",
-            "id": 12,
-            "text": "GPS信号が失われました。"
-        },
-        {
-            "filename": "HEAD_EAST",
-            "id": 13,
-            "text": "東に進みます。"
-        },
-        {
-            "filename": "HEAD_NORTH",
-            "id": 14,
-            "text": "北に進みます。"
-        },
-        {
-            "filename": "HEAD_NORTHEAST",
-            "id": 15,
-            "text": "北東に進みます。"
-        },
-        {
-            "filename": "HEAD_NORTHWEST",
-            "id": 16,
-            "text": "北西に進みます。"
-        },
-        {
-            "filename": "HEAD_SOUTH",
-            "id": 17,
-            "text": "南に進みます。"
-        },
-        {
-            "filename": "HEAD_SOUTHEAST",
-            "id": 18,
-            "text": "南東に進みます。"
-        },
-        {
-            "filename": "HEAD_SOUTHWEST",
-            "id": 19,
-            "text": "南西に進みます。"
-        },
-        {
-            "filename": "HEAD_WEST",
-            "id": 20,
-            "text": "西に進みます。"
-        },
-        {
-            "filename": "IN_1000_FEET",
-            "id": 21,
-            "text": "およそ1000フィート先"
-        },
-        {
-            "filename": "IN_100_FEET",
-            "id": 22,
-            "text": "およそ100フィート先"
-        },
-        {
-            "filename": "IN_100_METERS",
-            "id": 23,
-            "text": "およそ100メートル先"
-        },
-        {
-            "filename": "IN_100_YARDS",
-            "id": 24,
-            "text": "およそ100ヤード先"
-        },
-        {
-            "filename": "IN_150_FEET",
-            "id": 25,
-            "text": "およそ150フィート先"
-        },
-        {
-            "filename": "IN_150_METERS",
-            "id": 26,
-            "text": "およそ150メートル先"
-        },
-        {
-            "filename": "IN_150_YARDS",
-            "id": 27,
-            "text": "およそ150ヤード先"
-        },
-        {
-            "filename": "IN_1_AND_A_HALF_KILOMETERS",
-            "id": 28,
-            "text": "1.5キロ先"
-        },
-        {
-            "filename": "IN_1_AND_A_HALF_MILES",
-            "id": 29,
-            "text": "およそ1.5マイル先"
-        },
-        {
-            "filename": "IN_1_KILOMETER",
-            "id": 30,
-            "text": "およそ1キロ先"
-        },
-        {
-            "filename": "IN_1_MILE",
-            "id": 31,
-            "text": "およそ1マイル先"
-        },
-        {
-            "filename": "IN_200_FEET",
-            "id": 32,
-            "text": "おおよそ200フィート先"
-        },
-        {
-            "filename": "IN_200_METERS",
-            "id": 33,
-            "text": "およそ200メートル先"
-        },
-        {
-            "filename": "IN_200_YARDS",
-            "id": 34,
-            "text": "およそ200ヤード先"
-        },
-        {
-            "filename": "IN_2_KILOMETERS",
-            "id": 35,
-            "text": "およそ2キロ先"
-        },
-        {
-            "filename": "IN_2_MILES",
-            "id": 36,
-            "text": "およそ2マイル先"
-        },
-        {
-            "filename": "IN_300_FEET",
-            "id": 37,
-            "text": "およそ300フィート先"
-        },
-        {
-            "filename": "IN_300_METERS",
-            "id": 38,
-            "text": "およそ300メートル先"
-        },
-        {
-            "filename": "IN_300_YARDS",
-            "id": 39,
-            "text": "およそ300ヤード先"
-        },
-        {
-            "filename": "IN_3_KILOMETERS",
-            "id": 40,
-            "text": "およそ3キロ先"
-        },
-        {
-            "filename": "IN_3_MILES",
-            "id": 41,
-            "text": "およそ3マイル先"
-        },
-        {
-            "filename": "IN_400_FEET",
-            "id": 42,
-            "text": "およそ400フィート先"
-        },
-        {
-            "filename": "IN_400_METERS",
-            "id": 43,
-            "text": "およそ400メートル先"
-        },
-        {
-            "filename": "IN_400_YARDS",
-            "id": 44,
-            "text": "およそ400ヤード先"
-        },
-        {
-            "filename": "IN_500_FEET",
-            "id": 45,
-            "text": "およそ500フィート先"
-        },
-        {
-            "filename": "IN_500_METERS",
-            "id": 46,
-            "text": "およそ500メートル先"
-        },
-        {
-            "filename": "IN_50_FEET",
-            "id": 47,
-            "text": "およそ50フィート先"
-        },
-        {
-            "filename": "IN_50_METERS",
-            "id": 48,
-            "text": "50メートル先"
-        },
-        {
-            "filename": "IN_50_YARDS",
-            "id": 49,
-            "text": "およそ50ヤード先"
-        },
-        {
-            "filename": "IN_600_FEET",
-            "id": 50,
-            "text": "およそ600フィート先"
-        },
-        {
-            "filename": "IN_600_METERS",
-            "id": 51,
-            "text": "およそ600メートル先"
-        },
-        {
-            "filename": "IN_800_FEET",
-            "id": 52,
-            "text": "およそ800フィート先"
-        },
-        {
-            "filename": "IN_800_METERS",
-            "id": 53,
-            "text": "およそ800メートル先"
-        },
-        {
-            "filename": "IN_A_HALF_MILE",
-            "id": 54,
-            "text": "およそ0.5マイル先"
-        },
-        {
-            "filename": "IN_A_QUARTER_MILE",
-            "id": 55,
-            "text": "およそ0.25マイル先"
-        },
-        {
-            "filename": "IN_THREE_QUARTERS_OF_A_MILE",
-            "id": 56,
-            "text": ""
-        },
-        {
-            "filename": "KEEP_LEFT_AT_THE_FORK",
-            "id": 57,
-            "text": ""
-        },
-        {
-            "filename": "KEEP_RIGHT_AT_THE_FORK",
-            "id": 58,
-            "text": ""
-        },
-        {
-            "filename": "MAKE_A_UTURN",
-            "id": 59,
-            "text": ""
-        },
-        {
-            "filename": "NAVIGATION_RESUMED",
-            "id": 60,
-            "text": ""
-        },
-        {
-            "filename": "PLEASE_DESCRIBE_PROBLEM",
-            "id": 61,
-            "text": ""
-        },
-        {
-            "filename": "ROUNDABOUT_1ST_EXIT",
-            "id": 62,
-            "text": ""
-        },
-        {
-            "filename": "ROUNDABOUT_EXIT_INTO_THE_RAMP",
-            "id": 63,
-            "text": ""
-        },
-        {
-            "filename": "ROUNDABOUT_TAKE_2ND_EXIT",
-            "id": 64,
-            "text": ""
-        },
-        {
-            "filename": "ROUNDABOUT_TAKE_3RD_EXIT",
-            "id": 65,
-            "text": ""
-        },
-        {
-            "filename": "ROUNDABOUT_TAKE_4TH_EXIT",
-            "id": 66,
-            "text": ""
-        },
-        {
-            "filename": "ROUNDABOUT_TAKE_5TH_EXIT",
-            "id": 67,
-            "text": ""
-        },
-        {
-            "filename": "SHARP_LEFT",
-            "id": 68,
-            "text": ""
-        },
-        {
-            "filename": "SHARP_RIGHT",
-            "id": 69,
-            "text": ""
-        },
-        {
-            "filename": "SLIGHT_LEFT",
-            "id": 70,
-            "text": ""
-        },
-        {
-            "filename": "SLIGHT_LEFT_ONTO_THE_RAMP",
-            "id": 71,
-            "text": ""
-        },
-        {
-            "filename": "SLIGHT_RIGHT",
-            "id": 72,
-            "text": ""
-        },
-        {
-            "filename": "SLIGHT_RIGHT_ONTO_RAMP",
-            "id": 73,
-            "text": ""
-        },
-        {
-            "filename": "TAKE_THE_INTERCHANGE",
-            "id": 74,
-            "text": ""
-        },
-        {
-            "filename": "TAKE_THE_INTERCHANGE_ON_THE_LEFT",
-            "id": 75,
-            "text": ""
-        },
-        {
-            "filename": "TAKE_THE_EXIT",
-            "id": 76,
-            "text": ""
-        },
-        {
-            "filename": "TAKE_THE_EXIT_ON_THE_LEFT",
-            "id": 77,
-            "text": ""
-        },
-        {
-            "filename": "TAKE_THE_EXIT_ON_THE_RIGHT",
-            "id": 78,
-            "text": ""
-        },
-        {
-            "filename": "TAKE_THE_FERRY",
-            "id": 79,
-            "text": ""
-        },
-        {
-            "filename": "TAKE_THE_INTERCHANGE_ON_THE_RIGHT",
-            "id": 80,
-            "text": ""
-        },
-        {
-            "filename": "TAKE_THE_RAMP",
-            "id": 81,
-            "text": "入口です。"
-        },
-        {
-            "filename": "TAKE_THE_TRAIN",
-            "id": 82,
-            "text": "電車に乗ります。"
-        },
-        {
-            "filename": "THEN",
-            "id": 83,
-            "text": "その先"
-        },
-        {
-            "filename": "TURN_LEFT",
-            "id": 84,
-            "text": "左方向です。"
-        },
-        {
-            "filename": "TURN_LEFT_ONTO_RAMP",
-            "id": 85,
-            "text": "左方向、入口です。"
-        },
-        {
-            "filename": "TURN_RIGHT",
-            "id": 86,
-            "text": "右方向です。"
-        },
-        {
-            "filename": "TURN_RIGHT_ONTO_THE_RAMP",
-            "id": 87,
-            "text": "右方向、入口です。"
-        },
-        {
-            "filename": "WILL_ARRIVE",
-            "id": 88,
-            "text": "目的地です。"
+    "voices": {
+        "base": [
+            {
+                "filename": "ARRIVED",
+                "id": 1,
+                "text": "目的地に到着しました。おつかれさまでした。"
+            },
+            {
+                "filename": "CONTINUE_ON_THE_RAMP",
+                "id": 2,
+                "text": "分岐です。"
+            },
+            {
+                "filename": "CONTINUE_STRAIGHT",
+                "id": 3,
+                "text": "直進です。"
+            },
+            {
+                "filename": "DATA_LOST",
+                "id": 4,
+                "text": "データ接続が失われました。"
+            },
+            {
+                "filename": "DESTINATION_ON_LEFT",
+                "id": 5,
+                "text": "目的地は左側です。お疲れ様でした。"
+            },
+            {
+                "filename": "DESTINATION_ON_RIGHT",
+                "id": 6,
+                "text": "目的地は右側です。お疲れ様でした。"
+            },
+            {
+                "filename": "DESTINATION_WILL_BE_ON_LEFT",
+                "id": 7,
+                "text": "目的地は左側です。"
+            },
+            {
+                "filename": "DESTINATION_WILL_BE_ON_RIGHT",
+                "id": 8,
+                "text": "目的地は右側です。"
+            },
+            {
+                "filename": "ENTER_THE_ROUNDABOUT",
+                "id": 9,
+                "text": "ロータリー入口です。"
+            },
+            {
+                "filename": "EXIT_THE_ROUNDABOUT",
+                "id": 10,
+                "text": "ロータリー出口です。"
+            },
+            {
+                "filename": "GENERIC_CONTINUE",
+                "id": 11,
+                "text": "しばらく道なりです。"
+            },
+            {
+                "filename": "GPS_LOST",
+                "id": 12,
+                "text": "GPS信号が失われました。"
+            },
+            {
+                "filename": "HEAD_EAST",
+                "id": 13,
+                "text": "東に進みます。"
+            },
+            {
+                "filename": "HEAD_NORTH",
+                "id": 14,
+                "text": "北に進みます。"
+            },
+            {
+                "filename": "HEAD_NORTHEAST",
+                "id": 15,
+                "text": "北東に進みます。"
+            },
+            {
+                "filename": "HEAD_NORTHWEST",
+                "id": 16,
+                "text": "北西に進みます。"
+            },
+            {
+                "filename": "HEAD_SOUTH",
+                "id": 17,
+                "text": "南に進みます。"
+            },
+            {
+                "filename": "HEAD_SOUTHEAST",
+                "id": 18,
+                "text": "南東に進みます。"
+            },
+            {
+                "filename": "HEAD_SOUTHWEST",
+                "id": 19,
+                "text": "南西に進みます。"
+            },
+            {
+                "filename": "HEAD_WEST",
+                "id": 20,
+                "text": "西に進みます。"
+            },
+            {
+                "filename": "IN_1000_FEET",
+                "id": 21,
+                "text": "およそ1000フィート先"
+            },
+            {
+                "filename": "IN_100_FEET",
+                "id": 22,
+                "text": "およそ100フィート先"
+            },
+            {
+                "filename": "IN_100_METERS",
+                "id": 23,
+                "text": "およそ100メートル先"
+            },
+            {
+                "filename": "IN_100_YARDS",
+                "id": 24,
+                "text": "およそ100ヤード先"
+            },
+            {
+                "filename": "IN_150_FEET",
+                "id": 25,
+                "text": "およそ150フィート先"
+            },
+            {
+                "filename": "IN_150_METERS",
+                "id": 26,
+                "text": "およそ150メートル先"
+            },
+            {
+                "filename": "IN_150_YARDS",
+                "id": 27,
+                "text": "およそ150ヤード先"
+            },
+            {
+                "filename": "IN_1_AND_A_HALF_KILOMETERS",
+                "id": 28,
+                "text": "1.5キロ先"
+            },
+            {
+                "filename": "IN_1_AND_A_HALF_MILES",
+                "id": 29,
+                "text": "およそ1.5マイル先"
+            },
+            {
+                "filename": "IN_1_KILOMETER",
+                "id": 30,
+                "text": "およそ1キロ先"
+            },
+            {
+                "filename": "IN_1_MILE",
+                "id": 31,
+                "text": "およそ1マイル先"
+            },
+            {
+                "filename": "IN_200_FEET",
+                "id": 32,
+                "text": "おおよそ200フィート先"
+            },
+            {
+                "filename": "IN_200_METERS",
+                "id": 33,
+                "text": "およそ200メートル先"
+            },
+            {
+                "filename": "IN_200_YARDS",
+                "id": 34,
+                "text": "およそ200ヤード先"
+            },
+            {
+                "filename": "IN_2_KILOMETERS",
+                "id": 35,
+                "text": "およそ2キロ先"
+            },
+            {
+                "filename": "IN_2_MILES",
+                "id": 36,
+                "text": "およそ2マイル先"
+            },
+            {
+                "filename": "IN_300_FEET",
+                "id": 37,
+                "text": "およそ300フィート先"
+            },
+            {
+                "filename": "IN_300_METERS",
+                "id": 38,
+                "text": "およそ300メートル先"
+            },
+            {
+                "filename": "IN_300_YARDS",
+                "id": 39,
+                "text": "およそ300ヤード先"
+            },
+            {
+                "filename": "IN_3_KILOMETERS",
+                "id": 40,
+                "text": "およそ3キロ先"
+            },
+            {
+                "filename": "IN_3_MILES",
+                "id": 41,
+                "text": "およそ3マイル先"
+            },
+            {
+                "filename": "IN_400_FEET",
+                "id": 42,
+                "text": "およそ400フィート先"
+            },
+            {
+                "filename": "IN_400_METERS",
+                "id": 43,
+                "text": "およそ400メートル先"
+            },
+            {
+                "filename": "IN_400_YARDS",
+                "id": 44,
+                "text": "およそ400ヤード先"
+            },
+            {
+                "filename": "IN_500_FEET",
+                "id": 45,
+                "text": "およそ500フィート先"
+            },
+            {
+                "filename": "IN_500_METERS",
+                "id": 46,
+                "text": "およそ500メートル先"
+            },
+            {
+                "filename": "IN_50_FEET",
+                "id": 47,
+                "text": "およそ50フィート先"
+            },
+            {
+                "filename": "IN_50_METERS",
+                "id": 48,
+                "text": "50メートル先"
+            },
+            {
+                "filename": "IN_50_YARDS",
+                "id": 49,
+                "text": "およそ50ヤード先"
+            },
+            {
+                "filename": "IN_600_FEET",
+                "id": 50,
+                "text": "およそ600フィート先"
+            },
+            {
+                "filename": "IN_600_METERS",
+                "id": 51,
+                "text": "およそ600メートル先"
+            },
+            {
+                "filename": "IN_800_FEET",
+                "id": 52,
+                "text": "およそ800フィート先"
+            },
+            {
+                "filename": "IN_800_METERS",
+                "id": 53,
+                "text": "およそ800メートル先"
+            },
+            {
+                "filename": "IN_A_HALF_MILE",
+                "id": 54,
+                "text": "およそ0.5マイル先"
+            },
+            {
+                "filename": "IN_A_QUARTER_MILE",
+                "id": 55,
+                "text": "およそ0.25マイル先"
+            },
+            {
+                "filename": "IN_THREE_QUARTERS_OF_A_MILE",
+                "id": 56,
+                "text": "およそ0.75マイル先"
+            },
+            {
+                "filename": "KEEP_LEFT_AT_THE_FORK",
+                "id": 57,
+                "text": "分岐を左方向です。"
+            },
+            {
+                "filename": "KEEP_RIGHT_AT_THE_FORK",
+                "id": 58,
+                "text": "分岐を右方向です。"
+            },
+            {
+                "filename": "MAKE_A_UTURN",
+                "id": 59,
+                "text": "Uターンです。"
+            },
+            {
+                "filename": "NAVIGATION_RESUMED",
+                "id": 60,
+                "text": "ナビを再開します、"
+            },
+            {
+                "filename": "PLEASE_DESCRIBE_PROBLEM",
+                "id": 61,
+                "text": "問題の内容をお話しください。"
+            },
+            {
+                "filename": "ROUNDABOUT_1ST_EXIT",
+                "id": 62,
+                "text": "ロータリー一番目の出口です。"
+            },
+            {
+                "filename": "ROUNDABOUT_EXIT_INTO_THE_RAMP",
+                "id": 63,
+                "text": "ロータリーから、ランプに進みます。"
+            },
+            {
+                "filename": "ROUNDABOUT_TAKE_2ND_EXIT",
+                "id": 64,
+                "text": "ロータリー二番目の出口です。"
+            },
+            {
+                "filename": "ROUNDABOUT_TAKE_3RD_EXIT",
+                "id": 65,
+                "text": "ロータリー、3番目の出口です。"
+            },
+            {
+                "filename": "ROUNDABOUT_TAKE_4TH_EXIT",
+                "id": 66,
+                "text": "ロータリー、4番目の出口です。"
+            },
+            {
+                "filename": "ROUNDABOUT_TAKE_5TH_EXIT",
+                "id": 67,
+                "text": "ロータリー、5番目の出口です。"
+            },
+            {
+                "filename": "SHARP_LEFT",
+                "id": 68,
+                "text": "大きく左方向です。"
+            },
+            {
+                "filename": "SHARP_RIGHT",
+                "id": 69,
+                "text": ""
+            },
+            {
+                "filename": "SLIGHT_LEFT",
+                "id": 70,
+                "text": ""
+            },
+            {
+                "filename": "SLIGHT_LEFT_ONTO_THE_RAMP",
+                "id": 71,
+                "text": ""
+            },
+            {
+                "filename": "SLIGHT_RIGHT",
+                "id": 72,
+                "text": ""
+            },
+            {
+                "filename": "SLIGHT_RIGHT_ONTO_RAMP",
+                "id": 73,
+                "text": ""
+            },
+            {
+                "filename": "TAKE_THE_INTERCHANGE",
+                "id": 74,
+                "text": ""
+            },
+            {
+                "filename": "TAKE_THE_INTERCHANGE_ON_THE_LEFT",
+                "id": 75,
+                "text": ""
+            },
+            {
+                "filename": "TAKE_THE_EXIT",
+                "id": 76,
+                "text": ""
+            },
+            {
+                "filename": "TAKE_THE_EXIT_ON_THE_LEFT",
+                "id": 77,
+                "text": ""
+            },
+            {
+                "filename": "TAKE_THE_EXIT_ON_THE_RIGHT",
+                "id": 78,
+                "text": ""
+            },
+            {
+                "filename": "TAKE_THE_FERRY",
+                "id": 79,
+                "text": ""
+            },
+            {
+                "filename": "TAKE_THE_INTERCHANGE_ON_THE_RIGHT",
+                "id": 80,
+                "text": ""
+            },
+            {
+                "filename": "TAKE_THE_RAMP",
+                "id": 81,
+                "text": "入口です。"
+            },
+            {
+                "filename": "TAKE_THE_TRAIN",
+                "id": 82,
+                "text": "電車に乗ります。"
+            },
+            {
+                "filename": "THEN",
+                "id": 83,
+                "text": "その先"
+            },
+            {
+                "filename": "TURN_LEFT",
+                "id": 84,
+                "text": "左方向です。"
+            },
+            {
+                "filename": "TURN_LEFT_ONTO_RAMP",
+                "id": 85,
+                "text": "左方向、入口です。"
+            },
+            {
+                "filename": "TURN_RIGHT",
+                "id": 86,
+                "text": "右方向です。"
+            },
+            {
+                "filename": "TURN_RIGHT_ONTO_THE_RAMP",
+                "id": 87,
+                "text": "右方向、入口です。"
+            },
+            {
+                "filename": "WILL_ARRIVE",
+                "id": 88,
+                "text": "目的地です。"
+            }
+        ],
+        "override": {
+            "kiritan": [],
+            "ttchan": []
         }
-    ]
+    }
 }

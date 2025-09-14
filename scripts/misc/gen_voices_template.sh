@@ -44,7 +44,7 @@ json_output=$(jq -n \
         --slurpfile lines <(printf "%s\n" "${json_lines[@]}") \
         '$lines'
     )" \
-    '{"voices": $data}'
+    '{"voices":{"base":$data, "override":{"kiritan":[], "ttchan":[]}}}'
 )
 
 echo "$json_output" | jq '.' > "$output_json"
