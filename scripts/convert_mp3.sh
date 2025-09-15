@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 set -eEuo pipefail
-script_dir=$(cd "$(dirname "${0}")" && pwd)
 
-input_dir="${1-"$script_dir/../output/voices-wav"}"
-output_dir="${2-"$script_dir/../output/voices-mp3"}"
+input_dir="${1-""}"
+output_dir="${2-""}"
 
 if [[ -z "$output_dir" ]] || [[ -z $input_dir ]]; then
 	echo "Usage: $0 <input directory> <output directory>"
