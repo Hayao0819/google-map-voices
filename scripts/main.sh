@@ -12,15 +12,11 @@ trap 'rm -rf "$temp_dir"' EXIT HUP INT TERM
 voices=("kiritan" "ttchan")
 
 {
-	mkdir -p "$temp_dir/voices-wav"
-	"$script_dir/gen.sh" "$temp_dir/voices-wav"
-}
-
-{
 	for voice in "${voices[@]}"; do
 		mkdir -p "$temp_dir/voices-wav/$voice"
-		mkdir -p "$temp_dir/voices-mp3/$voice"
+		"$script_dir/gen.sh" "$voice" "$temp_dir/voices-wav/$voice"
 
+		mkdir -p "$temp_dir/voices-mp3/$voice"
 		"$script_dir/convert_mp3.sh" "$temp_dir/voices-wav/$voice" "$temp_dir/voices-mp3/$voice"
 	done
 }
@@ -30,9 +26,11 @@ voices=("kiritan" "ttchan")
 		cp "$data_dir/messages.plist" "$temp_dir/voices-mp3/$voice"
 		cp "$data_dir/messages.xml" "$temp_dir/voices-mp3/$voice"
 
-		cd "$temp_dir/voices-mp3/$voice" || exit 1
-
 		mkdir -p "$output_dir/$voice"
-		zip -r "$output_dir/$voice/voice_instructions_unitless.zip" ./*
+		(
+			cd "$temp_dir/voices-mp3/$voice" || exit 1
+
+			zip -r "$output_dir/$voice/voice_instructions_unitless.zip" ./*
+		)
 	done
 }
