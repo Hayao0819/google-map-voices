@@ -6,6 +6,7 @@ script_dir=$(cd "$(dirname "${0}")" && pwd)
 export GMV_CORE_DIR="${script_dir}/../core"
 
 target_charactor=""
+target_id=()
 output_dir=""
 voices_json_path="$script_dir/../data/voices.json"
 voices=()
@@ -14,16 +15,67 @@ charactors=()
 # shellcheck source=/dev/null
 source "$GMV_CORE_DIR/voicevox.sh"
 
+function usage() {
+	echo "Usage: $0 [options] voice output" >&2
+	echo "  voice: charactor name defined in $voices_json_path" >&2
+	echo "  output: output directory" >&2
+	echo "" >&2
+	echo "Options:" >&2
+	echo "  -i: target id (can be specified multiple times)" >&2
+	echo "  -h: show this help message" >&2
+}
+
 function init() {
+	local opt OPTARG OPTIND
+	while getopts ":hi:" opt; do
+		case $opt in
+		h)
+			usage
+			return 0
+			;;
+		i)
+			target_id+=("$OPTARG")
+			;;
+		\?)
+			echo "Invalid option: -$OPTARG" >&2
+			return 1
+			;;
+		esac
+	done
+
+	shift $((OPTIND - 1))
+
 	target_charactor="${1:-}"
 	output_dir="${2:-}"
 	if [[ -z "$output_dir" ]] || [[ -z "$target_charactor" ]]; then
-		echo "Usage: $0 <voice> <output directory>" >&2
+		usage
 		return 1
 	fi
 
 	readarray -t voices < <(jq -c '.voices.base[]' "$voices_json_path")
 	readarray -t charactors < <(jq -c '.charactors[]' "$voices_json_path")
+
+	# filter by target_id if specified
+	if ((${#target_id[@]} > 0)); then
+		local _filtered_voices=() _id
+		for _id in "${target_id[@]}"; do
+			local _found
+			_found=$(printf "%s\n" "${voices[@]}" | jq --exit-status "select(.id == $_id)") || {
+				echo "Warning: id $_id not found" >&2
+				continue
+			}
+			_filtered_voices+=("$_found")
+			unset _found
+		done
+		if ((${#_filtered_voices[@]} > 0)); then
+			voices=("${_filtered_voices[@]}")
+			unset _filtered_voices
+		else
+			echo "Error: no voices found for specified ids" >&2
+			return 1
+		fi
+		unset _id
+	fi
 
 	mkdir -p "$output_dir"
 }
