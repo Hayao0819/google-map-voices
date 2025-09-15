@@ -15,6 +15,10 @@ cd ..
 
 ## 適用方法
 
+### インストーラ
+
+### 手動
+
 1. 設定→ナビ→音声の選択→日本語を選択 (ここ重要)
 2. アプリを終了
 3. 何らかの方法で`/storage/emulated/0/Android/data/com.google.android.apps.maps/testdata/voice/ja_JP(文字列)/`を開く
