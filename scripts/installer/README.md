@@ -35,3 +35,12 @@ adb shellでsuコマンドが実行できる状態である必要があります
 zipファイルへのパスを渡すと、それを使います。URLを渡すと、ダウンロードを自動で行います。
 
 `ttchan`, `kiritan`の文字列を渡すと自動でダウンロードします。
+
+## 自分の手でｺﾈｺﾈ作った温かいzipファイルを使いたい方へ
+
+自分で作った`voice_instructions_unitless.zip`を使い方もこのインストーラスクリプトを用いることで配置を自動で行えます。
+
+```bash
+wget "https://raw.githubusercontent.com/Hayao0819/google-map-voices/refs/heads/master/scripts/installer/install.sh"
+bash ./install.sh /path/to/your_hot_file.zip
+```
