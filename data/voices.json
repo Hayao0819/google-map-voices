@@ -1,4 +1,16 @@
 {
+    "charactors":[
+        {
+            "name": "kiritan",
+            "source": "kiritan.sh",
+            "command":"kiritan"
+        },
+        {
+            "name": "ttchan",
+            "source":"ttchan.sh",
+            "command": "ttchan"
+        }
+    ],
     "voices": {
         "base": [
             {
