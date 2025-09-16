@@ -24,7 +24,6 @@ function usage() {
 	echo "  -i: target id (can be specified multiple times)" >&2
 	echo "  -h: show this help message" >&2
 }
-
 function init() {
 	local opt OPTARG OPTIND
 	while getopts ":hi:" opt; do
@@ -63,7 +62,6 @@ function parse_voices_json() {
 	local _override=()
 	readarray -t _override < <(jq -c --arg name "$target_charactor" '.instructions.override[$name][]?' "$voices_json_path" || true)
 
-	# if [[ -n "$_override" ]]; then
 	if ((${#_override[@]} > 0)); then
 		# id ごとに base を差し替える
 		local -A _override_map
@@ -77,9 +75,9 @@ function parse_voices_json() {
 		for _instr in "${instructions[@]}"; do
 			local _id
 			_id=$(jq -r '.id' <<<"$_instr")
-			if [[ -n "${override_map[$_id]:-}" ]]; then
-				_merged+=("${override_map[$_id]}")
-				unset 'override_map[$_id]'
+			if [[ -n "${_override_map[$_id]:-}" ]]; then
+				_merged+=("${_override_map[$_id]}")
+				unset '_override_map[$_id]'
 			else
 				_merged+=("$_instr")
 			fi
@@ -87,9 +85,8 @@ function parse_voices_json() {
 		unset _instr _id
 
 		# base に存在しない id を override が持っていた場合、追記
-		local _item
 		for _item in "${_override_map[@]}"; do
-			merged+=("$_item")
+			_merged+=("$_item")
 		done
 		unset _item
 		instructions=("${_merged[@]}")
@@ -110,7 +107,6 @@ function parse_voices_json() {
 		done
 		if ((${#_filtered[@]} > 0)); then
 			instructions=("${_filtered[@]}")
-			unset _filtered_voices
 		else
 			echo "Error: no voices found for specified ids" >&2
 			return 1
@@ -121,7 +117,7 @@ function parse_voices_json() {
 
 # util: select_charactor "charactor_name" -> json
 function select_charactor() {
-	local _setected_json
+	local _selected_json
 	_selected_json="$(printf "%s\n" "${charactors[@]}" | jq "select(.name == \"$1\")")"
 	if [[ -z "$_selected_json" ]]; then
 		echo "Error: charactor $1 not found" >&2
