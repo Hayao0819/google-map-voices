@@ -171,4 +171,4 @@ function main() {
 	done
 }
 
-init "$@" && main
+init "$@" && parse_voices_json && main
