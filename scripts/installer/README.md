@@ -54,3 +54,11 @@ zipファイルへのパスを渡すと、それを使います。URLを渡す�
 wget "https://raw.githubusercontent.com/Hayao0819/google-map-voices/refs/heads/master/scripts/installer/install.sh"
 bash ./install.sh /path/to/your_hot_file.zip
 ```
+
+## 権限チェック
+
+インストーラは実行前に簡易的な権限チェックを実行します。
+
+Root無しのオプション(`-n`)で実行する場合、一部のデバイスで'見かけ上は適用に成功している'挙動をしますが、実際には書き換えには成功していません。
+
+この挙動はnubia Z60 Ultraで確認していますが、詳細は不明です。これらについてご存じの方は連絡を頂けると幸いです。
