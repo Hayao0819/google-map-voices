@@ -52,8 +52,49 @@ function init() {
 		return 1
 	fi
 
+	mkdir -p "$output_dir"
+}
+
+function parse_voices_json() {
 	readarray -t instructions < <(jq -c '.instructions.base[]' "$voices_json_path")
 	readarray -t charactors < <(jq -c '.voices[]' "$voices_json_path")
+
+	# override があればマージ
+	local _override=()
+	readarray -t _override < <(jq -c --arg name "$target_charactor" '.instructions.override[$name][]?' "$voices_json_path" || true)
+
+	# if [[ -n "$_override" ]]; then
+	if ((${#_override[@]} > 0)); then
+		# id ごとに base を差し替える
+		local -A _override_map
+		local _item
+		for _item in "${_override[@]}"; do
+			_override_map["$(jq -r '.id' <<<"$_item")"]="$_item"
+		done
+		unset _item
+
+		local _merged=() _instr
+		for _instr in "${instructions[@]}"; do
+			local _id
+			_id=$(jq -r '.id' <<<"$_instr")
+			if [[ -n "${override_map[$_id]:-}" ]]; then
+				_merged+=("${override_map[$_id]}")
+				unset 'override_map[$_id]'
+			else
+				_merged+=("$_instr")
+			fi
+		done
+		unset _instr _id
+
+		# base に存在しない id を override が持っていた場合、追記
+		local _item
+		for _item in "${_override_map[@]}"; do
+			merged+=("$_item")
+		done
+		unset _item
+		instructions=("${_merged[@]}")
+		unset _merged _override_map
+	fi
 
 	# filter by target_id if specified
 	if ((${#target_id[@]} > 0)); then
@@ -76,8 +117,6 @@ function init() {
 		fi
 		unset _id
 	fi
-
-	mkdir -p "$output_dir"
 }
 
 # util: select_charactor "charactor_name" -> json

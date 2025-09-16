@@ -466,7 +466,19 @@
         ],
         "override": {
             "kiritan": [],
-            "ttchan": []
+            "ttchan": [],
+            "zundamon": [
+                {
+                    "filename": "ARRIVED",
+                    "id": 1,
+                    "text": "目的地到着なのだ。おつかれさまなのだ。"
+                },
+                {
+                    "filename": "WILL_ARRIVE",
+                    "id": 88,
+                    "text": "目的地なのだ。"
+                }
+            ]
         }
     }
 }
