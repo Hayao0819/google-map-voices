@@ -6,11 +6,8 @@ import multiprocessing
 from argparse import ArgumentParser
 from pathlib import Path
 
-from sys import exit
 from voicevox_core import AccelerationMode
 from voicevox_core.blocking import Onnxruntime, OpenJtalk, Synthesizer, VoiceModelFile
-
-# TODO: https://github.com/VOICEVOX/voicevox_core/pull/972 をリバートする
 
 
 @dataclasses.dataclass
@@ -116,7 +113,7 @@ def main() -> None:
 
     logger.info("%s", f"Creating an AudioQuery from {args.text!r}")
     audio_query = synthesizer.create_audio_query(args.text, args.style_id)
-    
+
     audio_query.speed_scale = args.speed_scale
     logger.debug("%s", f"{args.speed_scale=}")
     logger.debug("%s", f"{audio_query=}")
