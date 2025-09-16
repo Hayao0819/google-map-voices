@@ -1,14 +1,24 @@
 {
-    "charactors":[
+    "charactors": [
         {
             "name": "kiritan",
             "source": "kiritan.sh",
-            "command":"kiritan"
+            "command": "kiritan"
         },
         {
             "name": "ttchan",
-            "source":"ttchan.sh",
+            "source": "ttchan.sh",
             "command": "ttchan"
+        },
+        {
+            "name": "tsumugi",
+            "source": "tsumugi.sh",
+            "command": "tsumugi"
+        },
+        {
+            "name": "zundamon",
+            "source": "zundamon.sh",
+            "command": "zundamon"
         }
     ],
     "voices": {
