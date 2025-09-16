@@ -9,7 +9,7 @@ target_charactor=""
 target_id=()
 output_dir=""
 voices_json_path="$script_dir/../data/voices.json"
-voices=()
+instructions=()
 charactors=()
 
 # shellcheck source=/dev/null
@@ -52,23 +52,23 @@ function init() {
 		return 1
 	fi
 
-	readarray -t voices < <(jq -c '.voices.base[]' "$voices_json_path")
-	readarray -t charactors < <(jq -c '.charactors[]' "$voices_json_path")
+	readarray -t instructions < <(jq -c '.instructions.base[]' "$voices_json_path")
+	readarray -t charactors < <(jq -c '.voices[]' "$voices_json_path")
 
 	# filter by target_id if specified
 	if ((${#target_id[@]} > 0)); then
-		local _filtered_voices=() _id
+		local _filtered=() _id
 		for _id in "${target_id[@]}"; do
 			local _found
-			_found=$(printf "%s\n" "${voices[@]}" | jq --exit-status "select(.id == $_id)") || {
+			_found=$(printf "%s\n" "${instructions[@]}" | jq --exit-status "select(.id == $_id)") || {
 				echo "Warning: id $_id not found" >&2
 				continue
 			}
-			_filtered_voices+=("$_found")
+			_filtered+=("$_found")
 			unset _found
 		done
-		if ((${#_filtered_voices[@]} > 0)); then
-			voices=("${_filtered_voices[@]}")
+		if ((${#_filtered[@]} > 0)); then
+			instructions=("${_filtered[@]}")
 			unset _filtered_voices
 		else
 			echo "Error: no voices found for specified ids" >&2
@@ -115,7 +115,7 @@ function main() {
 	local _charactor_source
 
 	local _v
-	for _v in "${voices[@]}"; do
+	for _v in "${instructions[@]}"; do
 		local _id _text _filename
 		_id=$(jq -r '.id' <<<"$_v")
 		_text=$(jq -r '.text' <<<"$_v")

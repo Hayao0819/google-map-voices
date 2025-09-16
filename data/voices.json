@@ -1,5 +1,5 @@
 {
-    "charactors": [
+    "voices": [
         {
             "name": "kiritan",
             "source": "kiritan.sh",
@@ -21,7 +21,7 @@
             "command": "zundamon"
         }
     ],
-    "voices": {
+    "instructions": {
         "base": [
             {
                 "filename": "ARRIVED",
