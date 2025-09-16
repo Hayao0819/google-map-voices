@@ -4,6 +4,7 @@ set -eEuo pipefail
 
 target_zip=""
 actual_zip=""
+no_root=false
 
 binary_url="https://github.com/Hayao0819/google-map-voices/raw/refs/heads/master/binary/%NAME%/voice_instructions_unitless.zip"
 google_map_voice_path="/storage/emulated/0/Android/data/com.google.android.apps.maps/testdata/voice"
@@ -17,21 +18,35 @@ function test_adb_shell() {
 		echo "adb is not working. Please check your adb setup." >&2
 		return 1
 	}
+
+	list_map_voices > /dev/null || {
+		echo "Cannot access $google_map_voice_path. Please check if the path exists and you have the necessary permissions." >&2
+		return 1
+	}
 }
 
 function test_root() {
 	adb shell 'su -c "echo 1"' >/dev/null 2>&1 || {
+		if $no_root; then
+			echo "Warning: adb root access is not available, but continuing as -n option is provided." >&2
+			return
+		fi
 		echo "Root access is required. Please root your device and enable adb root access." >&2
 		return 1
 	}
 }
 
 function adb_shell_su() {
-	adb shell "su -c \"$*\""
+	if [[ $no_root == true ]]; then
+		# echo "Skipping root access check as -n option is provided" >&2
+		adb_shell "$@"
+		return
+	fi
+	adb shell -- su -c "$@"
 }
 
 function adb_shell() {
-	adb shell "$*"
+	adb shell -- "$@"
 }
 
 function adb_mktempd() {
@@ -39,11 +54,29 @@ function adb_mktempd() {
 }
 
 function init() {
-	test_adb_shell
+
+	local opt OPTARG OPTIND
+	while getopts ":hn" opt; do
+		case $opt in
+		n)
+			no_root=true
+			;;
+		h)
+			echo "Usage: $0 <path or url to voice zip>" >&2
+			exit 0
+			;;
+		\?)
+			echo "Invalid option: -$OPTARG" >&2
+			return 1
+			;;
+		esac
+	done
+	shift $((OPTIND - 1))
 
 	target_zip="${1-""}"
 	if [[ -z "$target_zip" ]]; then
-		echo "Usage: $0 <path or url to voice zip>" >&2
+		echo "Usage: $0  [-n] <path or url to voice zip> " >&2
+		echo "  -n: Do not check for root access (may fail if no root or greater than Android 10)" >&2
 		return 1
 	fi
 }
@@ -123,8 +156,9 @@ function push_zip() {
 
 function main() {
 	init "$@"
-	load_zip
+	test_adb_shell
 	test_root
+	load_zip
 	stop_map
 	push_zip
 }
