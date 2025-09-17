@@ -13,3 +13,13 @@
 ## `messages.plist` / `messages.xml`
 
 気が向いたら書きます。雰囲気で察してください。
+
+## `legacy_messages.xml`
+
+古のGoogle Mapでの`messsages.xml`のサンプルです。
+
+## `legacy.json`
+
+古のGoogle MapでのIDと2025年9月17日現在での音声データのIDの対応表です。
+
+今後このデータをもとにデータをマイグレーションするスクリプトを実装予定です。

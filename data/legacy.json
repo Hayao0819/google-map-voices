@@ -1,0 +1,87 @@
+[
+  {
+    "legacy_id": 1,
+    "new_id": 14
+  },
+  {
+    "legacy_id": 2,
+    "new_id": 15
+  },
+  {
+    "legacy_id": 3,
+    "new_id": 13
+  },
+  {
+    "legacy_id": 4,
+    "new_id": 18
+  },
+  {
+    "legacy_id": 5,
+    "new_id": 17
+  },
+  {
+    "legacy_id": 6,
+    "new_id": 19
+  },
+  {
+    "legacy_id": 7,
+    "new_id": 20
+  },
+  {
+    "legacy_id": 8,
+    "new_id": 16
+  },
+  {
+    "legacy_id": 9,
+    "new_id": 70
+  },
+  {
+    "legacy_id": 10,
+    "new_id": 72
+  },
+  {
+    "legacy_id": 11,
+    "new_id": null,
+    "memo": "そろそろ左折です"
+  },
+  {
+    "legacy_id": 12,
+    "new_id": "そろそろ右折です"
+  },
+  {
+    "legacy_id": 13,
+    "new_id": 68
+  },
+  {
+    "legacy_id": 14,
+    "new_id": 69
+  },
+  {
+    "legacy_id": 15,
+    "new_id": 71
+  },
+  {
+    "legacy_id": 16,
+    "new_id": 73
+  },
+  {
+    "legacy_id": 17,
+    "new_id": 85
+  },
+  {
+    "legacy_id": 18,
+    "new_id": 87
+  },
+  {
+    "legacy_id": 19,
+    "new_id": 81
+  },
+  {
+    "legacy_id": 20,
+    "new_id": 77
+  },
+  {
+    "legacy_id": 21,
+    "new_id": 78
+  }
+]

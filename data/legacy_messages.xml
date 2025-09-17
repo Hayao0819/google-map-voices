@@ -1,0 +1,69 @@
+<voice_instructions>
+  <distance_message min="950" max="1299">in_1_kilometer.ogg</distance_message>
+  <predefined_message type="THEN">THEN.ogg</predefined_message>
+  <distance_message min="2600" max="3500">in_3_kilometers.ogg</distance_message>
+  <distance_message min="460" max="549">in_500_meters.ogg</distance_message>
+  <predefined_message type="NAVIGATION_RESUMED">NAVIGATION_RESUMED.ogg</predefined_message>
+  <predefined_message type="DATA_LOST">DATA_LOST.ogg</predefined_message>
+  <predefined_message type="PLEASE_DESCRIBE_PROBLEM">PLEASE_DESCRIBE_PROBLEM.ogg</predefined_message>
+  <distance_message min="145" max="189">in_150_meters.ogg</distance_message>
+  <predefined_message type="ARRIVED">ARRIVED.ogg</predefined_message>
+  <maneuver_message id="24">24.ogg</maneuver_message>
+  <maneuver_message id="25">25.ogg</maneuver_message>
+  <maneuver_message id="26">26.ogg</maneuver_message>
+  <maneuver_message id="27">27.ogg</maneuver_message>
+  <maneuver_message id="20">20.ogg</maneuver_message>
+  <maneuver_message id="21">21.ogg</maneuver_message>
+  <maneuver_message id="22">22.ogg</maneuver_message>
+  <maneuver_message id="23">23.ogg</maneuver_message>
+  <predefined_message type="DESTINATION_WILL_BE_ON_RIGHT">DESTINATION_WILL_BE_ON_RIGHT.ogg</predefined_message>
+  <predefined_message type="DESTINATION_WILL_BE_ON_LEFT">DESTINATION_WILL_BE_ON_LEFT.ogg</predefined_message>
+  <distance_message min="95" max="144">in_100_meters.ogg</distance_message>
+  <maneuver_message id="28">28.ogg</maneuver_message>
+  <maneuver_message id="29">29.ogg</maneuver_message>
+  <maneuver_message id="40">40.ogg</maneuver_message>
+  <maneuver_message id="41">41.ogg</maneuver_message>
+  <maneuver_message id="1">1.ogg</maneuver_message>
+  <maneuver_message id="3">3.ogg</maneuver_message>
+  <maneuver_message id="2">2.ogg</maneuver_message>
+  <maneuver_message id="5">5.ogg</maneuver_message>
+  <maneuver_message id="4">4.ogg</maneuver_message>
+  <maneuver_message id="7">7.ogg</maneuver_message>
+  <maneuver_message id="6">6.ogg</maneuver_message>
+  <maneuver_message id="9">9.ogg</maneuver_message>
+  <maneuver_message id="8">8.ogg</maneuver_message>
+  <distance_message min="550" max="749">in_600_meters.ogg</distance_message>
+  <distance_message min="750" max="949">in_800_meters.ogg</distance_message>
+  <predefined_message type="GPS_LOST">GPS_LOST.ogg</predefined_message>
+  <distance_message min="280" max="369">in_300_meters.ogg</distance_message>
+  <predefined_message type="DESTINATION_ON_RIGHT">DESTINATION_ON_RIGHT.ogg</predefined_message>
+  <maneuver_message id="39">39.ogg</maneuver_message>
+  <maneuver_message id="38">38.ogg</maneuver_message>
+  <distance_message min="190" max="279">in_200_meters.ogg</distance_message>
+  <distance_message min="1300" max="1849">in_1_and_a_half_kilometers.ogg</distance_message>
+  <distance_message min="1850" max="2599">in_2_kilometers.ogg</distance_message>
+  <maneuver_message id="11">11.ogg</maneuver_message>
+  <maneuver_message id="10">10.ogg</maneuver_message>
+  <maneuver_message id="13">13.ogg</maneuver_message>
+  <maneuver_message id="12">12.ogg</maneuver_message>
+  <maneuver_message id="15">15.ogg</maneuver_message>
+  <maneuver_message id="14">14.ogg</maneuver_message>
+  <maneuver_message id="17">17.ogg</maneuver_message>
+  <maneuver_message id="16">16.ogg</maneuver_message>
+  <maneuver_message id="19">19.ogg</maneuver_message>
+  <maneuver_message id="18">18.ogg</maneuver_message>
+  <maneuver_message id="31">31.ogg</maneuver_message>
+  <maneuver_message id="30">30.ogg</maneuver_message>
+  <maneuver_message id="37">37.ogg</maneuver_message>
+  <maneuver_message id="36">36.ogg</maneuver_message>
+  <maneuver_message id="35">35.ogg</maneuver_message>
+  <maneuver_message id="34">34.ogg</maneuver_message>
+  <distance_message min="0" max="94">in_50_meters.ogg</distance_message>
+  <maneuver_message id="33">33.ogg</maneuver_message>
+  <distance_message min="370" max="459">in_400_meters.ogg</distance_message>
+  <predefined_message type="DESTINATION_ON_LEFT">DESTINATION_ON_LEFT.ogg</predefined_message>
+  <predefined_message type="GENERIC_CONTINUE">GENERIC_CONTINUE.ogg</predefined_message>
+  <maneuver_message id="32">32.ogg</maneuver_message>
+  <predefined_message type="WILL_ARRIVE">WILL_ARRIVE.ogg</predefined_message>
+  <maneuver_message id="42" suppressed="true"/>
+</voice_instructions>
