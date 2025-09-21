@@ -12,6 +12,11 @@ voices_json_path="$script_dir/../data/voices.json"
 instructions=()
 charactors=()
 
+# 並列実行数
+max_jobs=4
+# 子プロセスの PID を格納
+pids=()
+
 # shellcheck source=/dev/null
 source "$GMV_CORE_DIR/voicevox.sh"
 
@@ -146,8 +151,20 @@ function call_charactor() {
 	"$_command" "$@"
 }
 
+# 終了時・シグナル受信時に子プロセスを殺す
+cleanup() {
+	echo "Cleaning up child processes..." >&2
+	for pid in "${pids[@]}"; do
+		if kill -0 "$pid" 2>/dev/null; then
+			kill -TERM "$pid" 2>/dev/null || true
+		fi
+	done
+	wait || true
+}
+
 function main() {
 	local _charactor_source
+	trap cleanup INT TERM EXIT
 
 	local _v
 	for _v in "${instructions[@]}"; do
@@ -163,11 +180,32 @@ function main() {
 
 		local _output_path="$output_dir/${_filename}.wav"
 
-		call_charactor "$target_charactor" "$_text" "$_output_path" --speed-scale 1.1 || {
-			echo "Error: failed to generate id $_id" >&2
+		(
+			# サブシェル内で実行
+			set -eEuo pipefail
+			call_charactor "$target_charactor" "$_text" "$_output_path" --speed-scale 1.1
+			echo "Generated id $_id: $_text -> $_output_path"
+		) &
+
+		pid=$!
+		pids+=("$pid")
+
+		# 実行中のジョブが MAX_JOBS 以上なら wait -n で1つ終了を待つ
+		while (($(jobs -r | wc -l) >= max_jobs)); do
+			if ! wait -n; then
+				echo "Error: one of the jobs failed" >&2
+				exit 1
+			fi
+		done
+	done
+
+	# 残りのジョブを wait
+	local pid
+	for pid in "${pids[@]}"; do
+		if ! wait "$pid"; then
+			echo "Error: job $pid failed" >&2
 			exit 1
-		}
-		echo "Generated id $_id: $_text -> $_output_path"
+		fi
 	done
 }
 
