@@ -24,10 +24,16 @@
 
 指定可能な引数はありません。
 
+`jq`と`zip`が必要です。
+
 ## misc/gen_voices_template.sh
 
 `messages.xml`から`voices.json`のテンプレートを生成します。
 
+`xmllint`が必要です。
+
 ## misc/setup.sh
 
 `voicevox_core`のダウンロードを行います。
+
+`curl`が必要です。
