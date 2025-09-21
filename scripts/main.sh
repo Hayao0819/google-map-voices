@@ -60,7 +60,7 @@ generate_audio() {
 
 	local _mp3_dir="$temp_dir/$_voice/voices"
 	mkdir -p "$_mp3_dir"
-	"$script_dir/convert_opus.sh" "$_wav_dir" "$_mp3_dir"
+	"$script_dir/convert_mp3.sh" "$_wav_dir" "$_mp3_dir"
 
 	rm -rf "$_wav_dir"
 }
