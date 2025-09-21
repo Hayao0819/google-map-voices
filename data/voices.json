@@ -331,7 +331,7 @@
             {
                 "filename": "ROUNDABOUT_1ST_EXIT",
                 "id": 62,
-                "text": "ロータリー一番目の出口です。"
+                "text": "ロータリー1番目の出口です。"
             },
             {
                 "filename": "ROUNDABOUT_EXIT_INTO_THE_RAMP",
@@ -341,7 +341,7 @@
             {
                 "filename": "ROUNDABOUT_TAKE_2ND_EXIT",
                 "id": 64,
-                "text": "ロータリー二番目の出口です。"
+                "text": "ロータリー2番目の出口です。"
             },
             {
                 "filename": "ROUNDABOUT_TAKE_3RD_EXIT",
