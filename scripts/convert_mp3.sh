@@ -15,7 +15,14 @@ if ! which ffmpeg >/dev/null 2>&1; then
 	echo "ffmpeg is required. Please install it."
 	exit 1
 fi
-for wav_file in "$input_dir"/*.wav; do
+
+shopt -s nullglob
+wav_files=("$input_dir"/*.wav)
+if [ ${#wav_files[@]} -eq 0 ]; then
+	echo "No .wav files found in $input_dir"
+	exit 0
+fi
+for wav_file in "${wav_files[@]}"; do
 	filename=$(basename "$wav_file" .wav)
 	output_file="$output_dir/${filename}.mp3"
 	echo "Converting $wav_file to $output_file"
