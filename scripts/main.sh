@@ -84,7 +84,8 @@ generate_instructions_zip() {
 	cp -r "$_msg_dir/"* "$_zip_dir"
 	(
 		cd "$_zip_dir" || exit 1
-		zip -r "$output_dir/$_voice/voice_instructions.zip" ./*
+		mkdir -p "$output_dir/$_voice"
+		zip -r "$output_dir/$_voice/voice_instructions_unitless.zip" ./*
 	)
 }
 
