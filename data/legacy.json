@@ -1,87 +1,174 @@
-[
-  {
-    "legacy_id": 1,
-    "new_id": 14
-  },
-  {
-    "legacy_id": 2,
-    "new_id": 15
-  },
-  {
-    "legacy_id": 3,
-    "new_id": 13
-  },
-  {
-    "legacy_id": 4,
-    "new_id": 18
-  },
-  {
-    "legacy_id": 5,
-    "new_id": 17
-  },
-  {
-    "legacy_id": 6,
-    "new_id": 19
-  },
-  {
-    "legacy_id": 7,
-    "new_id": 20
-  },
-  {
-    "legacy_id": 8,
-    "new_id": 16
-  },
-  {
-    "legacy_id": 9,
-    "new_id": 70
-  },
-  {
-    "legacy_id": 10,
-    "new_id": 72
-  },
-  {
-    "legacy_id": 11,
-    "new_id": null,
-    "memo": "そろそろ左折です"
-  },
-  {
-    "legacy_id": 12,
-    "new_id": "そろそろ右折です"
-  },
-  {
-    "legacy_id": 13,
-    "new_id": 68
-  },
-  {
-    "legacy_id": 14,
-    "new_id": 69
-  },
-  {
-    "legacy_id": 15,
-    "new_id": 71
-  },
-  {
-    "legacy_id": 16,
-    "new_id": 73
-  },
-  {
-    "legacy_id": 17,
-    "new_id": 85
-  },
-  {
-    "legacy_id": 18,
-    "new_id": 87
-  },
-  {
-    "legacy_id": 19,
-    "new_id": 81
-  },
-  {
-    "legacy_id": 20,
-    "new_id": 77
-  },
-  {
-    "legacy_id": 21,
-    "new_id": 78
-  }
-]
+{
+  "by_id": [
+    {
+      "legacy_id": 1,
+      "new_id": 14
+    },
+    {
+      "legacy_id": 2,
+      "new_id": 15
+    },
+    {
+      "legacy_id": 3,
+      "new_id": 13
+    },
+    {
+      "legacy_id": 4,
+      "new_id": 18
+    },
+    {
+      "legacy_id": 5,
+      "new_id": 17
+    },
+    {
+      "legacy_id": 6,
+      "new_id": 19
+    },
+    {
+      "legacy_id": 7,
+      "new_id": 20
+    },
+    {
+      "legacy_id": 8,
+      "new_id": 16
+    },
+    {
+      "legacy_id": 9,
+      "new_id": 70
+    },
+    {
+      "legacy_id": 10,
+      "new_id": 72
+    },
+    {
+      "legacy_id": 11,
+      "new_id": null,
+      "memo": "そろそろ左折です"
+    },
+    {
+      "legacy_id": 12,
+      "new_id": null,
+      "memo": "そろそろ右折です"
+    },
+    {
+      "legacy_id": 13,
+      "new_id": 68
+    },
+    {
+      "legacy_id": 14,
+      "new_id": 69
+    },
+    {
+      "legacy_id": 15,
+      "new_id": 71
+    },
+    {
+      "legacy_id": 16,
+      "new_id": 73
+    },
+    {
+      "legacy_id": 17,
+      "new_id": 85
+    },
+    {
+      "legacy_id": 18,
+      "new_id": 87
+    },
+    {
+      "legacy_id": 19,
+      "new_id": 81
+    },
+    {
+      "legacy_id": 20,
+      "new_id": 77
+    },
+    {
+      "legacy_id": 21,
+      "new_id": 78
+    },
+    {
+      "legacy_id": 22,
+      "new_id": 7
+    },
+    {
+      "legacy_id": 23,
+      "new_id": 57
+    },
+    {
+      "legacy_id": 24,
+      "new_id": 58
+    },
+    {
+      "legacy_id": 25,
+      "new_id": 2
+    },
+    {
+      "legacy_id": 26,
+      "new_id": 9
+    },
+    {
+      "legacy_id": 27,
+      "new_id": 62
+    },
+    {
+      "legacy_id": 28,
+      "new_id": 64
+    },
+    {
+      "legacy_id": 29,
+      "new_id": 65
+    },
+    {
+      "legacy_id": 30,
+      "new_id": 66
+    },
+    {
+      "legacy_id": 31,
+      "new_id": 67
+    },
+    {
+      "legacy_id": 32,
+      "new_id": 63
+    },
+    {
+      "legacy_id": 33,
+      "new_id": 10
+    },
+    {
+      "legacy_id": 34,
+      "new_id": 11
+    },
+    {
+      "legacy_id": 35,
+      "new_id": 79
+    },
+    {
+      "legacy_id": 36,
+      "new_id": 82
+    },
+    {
+      "legacy_id": 37,
+      "new_id": 59
+    },
+    {
+      "legacy_id": 38,
+      "new_id": 75
+    },
+    {
+      "legacy_id": 39,
+      "new_id": 80
+    },
+    {
+      "legacy_id": 40,
+      "new_id": 74
+    },
+    {
+      "legacy_id": 41,
+      "new_id": null,
+      "memo": "合流します"
+    }
+  ],
+  "by_type":[
+    
+  ]
+}
