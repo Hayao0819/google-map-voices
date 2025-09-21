@@ -3,22 +3,46 @@
         {
             "name": "kiritan",
             "source": "kiritan.sh",
-            "command": "kiritan"
+            "command": [
+                "kiritan",
+                "%TEXT%",
+                "%OUTPUT_PATH%",
+                "--speed-scale",
+                "1.1"
+            ]
         },
         {
             "name": "ttchan",
             "source": "ttchan.sh",
-            "command": "ttchan"
+            "command": [
+                "ttchan",
+                "%TEXT%",
+                "%OUTPUT_PATH%",
+                "--speed-scale",
+                "1.1"
+            ]
         },
         {
             "name": "tsumugi",
             "source": "tsumugi.sh",
-            "command": "tsumugi"
+            "command": [
+                "tsumugi",
+                "%TEXT%",
+                "%OUTPUT_PATH%",
+                "--speed-scale",
+                "1.1"
+            ]
         },
         {
             "name": "zundamon",
             "source": "zundamon.sh",
-            "command": "zundamon"
+            "command": [
+                "zundamon",
+                "%TEXT%",
+                "%OUTPUT_PATH%",
+                "--speed-scale",
+                "1.1"
+            ]
         }
     ],
     "instructions": {

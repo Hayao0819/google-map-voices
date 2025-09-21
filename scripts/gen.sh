@@ -135,12 +135,19 @@ function select_charactor() {
 function call_charactor() {
 	local _selected_json
 	_selected_json="$(select_charactor "$1")" || return 1
-	shift
+	local _text="$2"
+	local _output_path="$3"
+	shift 3
+	if [[ -z "$_text" ]] || [[ -z "$_output_path" ]]; then
+		echo "Error: call_charactor requires text and output_path" >&2
+		return 1
+	fi
 
-	local _source _command
+	local _source _command=()
 	_source=$(jq -r '.source' <<<"$_selected_json")
-	_command=$(jq -r '.command' <<<"$_selected_json")
-	if [[ -z "$_source" ]] || [[ -z "$_command" ]]; then
+	# _command=$(jq -r '.command' <<<"$_selected_json")
+	readarray -t _command < <(jq -r '.command[]' <<<"$_selected_json" | sed -e "s|%TEXT%|$_text|g" -e "s|%OUTPUT_PATH%|$_output_path|g")
+	if [[ -z "$_source" ]] || ((${#_command[@]} == 0)); then
 		echo "Error: charactor $1 has no source or command" >&2
 		return 1
 	fi
@@ -148,7 +155,7 @@ function call_charactor() {
 	# shellcheck source=/dev/null
 	source "$GMV_CORE_DIR/$_source"
 
-	"$_command" "$@"
+	"${_command[@]}" "$@"
 }
 
 # 終了時・シグナル受信時に子プロセスを殺す
@@ -183,7 +190,7 @@ function main() {
 		(
 			# サブシェル内で実行
 			set -eEuo pipefail
-			call_charactor "$target_charactor" "$_text" "$_output_path" --speed-scale 1.1
+			call_charactor "$target_charactor" "$_text" "$_output_path"
 			echo "Generated id $_id: $_text -> $_output_path"
 		) &
 
