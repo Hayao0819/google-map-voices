@@ -67,7 +67,7 @@ generate_audio() {
 
 generate_messages() {
 	local _voice="$1"
-	local _msg_dir="$data_dir/$_voice/messages"
+	local _msg_dir="$temp_dir/$_voice/messages"
 	mkdir -p "$_msg_dir"
 	cp "$data_dir/messages.xml" "$_msg_dir/messages.xml"
 	cp "$data_dir/messages.plist" "$_msg_dir/messages.plist"
@@ -78,7 +78,7 @@ generate_instructions_zip() {
 	local _zip_dir="$temp_dir/$_voice/archive"
 
 	local _wav_dir="$temp_dir/$_voice/voices"
-	local _msg_dir="$data_dir/$_voice/messages"
+	local _msg_dir="$temp_dir/$_voice/messages"
 	mkdir -p "$_zip_dir"
 	cp -r "$_wav_dir/"* "$_zip_dir"
 	cp -r "$_msg_dir/"* "$_zip_dir"
