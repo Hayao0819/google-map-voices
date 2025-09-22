@@ -241,6 +241,12 @@
       "legacy_max": 549,
       "legacy_filename": "in_500_meters.ogg",
       "new_id": 46
+    },
+    {
+      "legacy_min": 145,
+      "legacy_max": 189,
+      "legacy_filename": "in_150_meters.ogg",
+      "new_id": 26
     }
   ]
 }
