@@ -2,22 +2,27 @@
   "by_id": [
     {
       "legacy_id": 1,
+      "legacy_filename": "1.ogg",
       "new_id": 14
     },
     {
       "legacy_id": 2,
+      "legacy_filename": "2.ogg",
       "new_id": 15
     },
     {
       "legacy_id": 3,
+      "legacy_filename": "3.ogg",
       "new_id": 13
     },
     {
       "legacy_id": 4,
+      "legacy_filename": "4.ogg",
       "new_id": 18
     },
     {
       "legacy_id": 5,
+      "legacy_filename": "5.ogg",
       "new_id": 17
     },
     {
@@ -168,7 +173,74 @@
       "memo": "合流します"
     }
   ],
-  "by_type":[
-    
+  "by_type": [
+    {
+      "legacy_type": "THEN",
+      "new_id": 83
+    },
+    {
+      "legacy_type": "NAVIGATION_RESUMED",
+      "new_id": 60
+    },
+    {
+      "legacy_type": "DATA_LOST",
+      "new_id": 4
+    },
+    {
+      "legacy_type": "PLEASE_DESCRIBE_PROBLEM",
+      "new_id": 61
+    },
+    {
+      "legacy_type": "ARRIVED",
+      "new_id": 1
+    },
+    {
+      "legacy_type": "DESTINATION_WILL_BE_ON_RIGHT",
+      "new_id": 8
+    },
+    {
+      "legacy_type": "DESTINATION_WILL_BE_ON_LEFT",
+      "new_id": 7
+    },
+    {
+      "legacy_type": "GPS_LOST",
+      "new_id": 12
+    },
+    {
+      "legacy_type": "DESTINATION_ON_RIGHT",
+      "new_id": 6
+    },
+    {
+      "legacy_type": "DESTINATION_ON_LEFT",
+      "new_id": 5
+    },
+    {
+      "legacy_type": "GENERIC_CONTINUE",
+      "new_id": 11
+    },
+    {
+      "legacy_type": "WILL_ARRIVE",
+      "new_id": 88
+    }
+  ],
+  "by_range": [
+    {
+      "legacy_min": 950,
+      "legacy_max": 1299,
+      "legacy_filename": "in_1_kilometer.ogg",
+      "new_id": 30
+    },
+    {
+      "legacy_min": 2600,
+      "legacy_max": 3500,
+      "legacy_filename": "in_3_kilometers.ogg",
+      "new_id": 40
+    },
+    {
+      "legacy_min": 460,
+      "legacy_max": 549,
+      "legacy_filename": "in_500_meters.ogg",
+      "new_id": 46
+    }
   ]
 }
