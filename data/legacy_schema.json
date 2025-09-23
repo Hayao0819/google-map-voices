@@ -1,0 +1,98 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "by_id": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "legacy_id": {
+                        "type": "integer"
+                    },
+                    "legacy_filename": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "new_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "memo": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "legacy_id"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "by_type": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "legacy_type": {
+                        "type": "string"
+                    },
+                    "new_id": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "legacy_type",
+                    "new_id"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "by_range": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "legacy_min": {
+                        "type": "integer"
+                    },
+                    "legacy_max": {
+                        "type": "integer"
+                    },
+                    "legacy_filename": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "new_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "legacy_min",
+                    "legacy_max"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "by_id",
+        "by_type",
+        "by_range"
+    ],
+    "additionalProperties": false
+}

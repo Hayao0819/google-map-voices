@@ -1,4 +1,5 @@
 {
+  "$schema": "./legacy_schema.json",
   "by_id": [
     {
       "legacy_id": 1,
@@ -271,6 +272,35 @@
       "legacy_max": 369,
       "legacy_filename": "in_300_meters.ogg",
       "new_id": 38
+    },
+    {
+      "legacy_min": 190,
+      "legacy_max": 279,
+      "legacy_filename": "in_200_meters.ogg",
+      "new_id": 33
+    },
+    {
+      "legacy_min": 1300,
+      "legacy_max": 1849,
+      "legacy_filename": "in_1_and_a_half_kilometers.ogg",
+      "new_id": 28
+    },
+    {
+      "legacy_min": 1850,
+      "legacy_max": 2599,
+      "legacy_filename": "in_2_kilometers.ogg",
+      "new_id": 35
+    },
+    {
+      "legacy_min": 0,
+      "legacy_max": 94,
+      "legacy_filename": "in_50_meters.ogg",
+      "new_id": 48
+    },
+    {
+      "legacy_min": 370,
+      "legacy_max": 459,
+      "legacy_filename": "in_400_meters.ogg"
     }
   ]
 }
