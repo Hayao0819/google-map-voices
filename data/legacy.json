@@ -247,6 +247,30 @@
       "legacy_max": 189,
       "legacy_filename": "in_150_meters.ogg",
       "new_id": 26
+    },
+    {
+      "legacy_min": 95,
+      "legacy_max": 144,
+      "legacy_filename": "in_100_meters.ogg",
+      "new_id": 23
+    },
+    {
+      "legacy_min": 550,
+      "legacy_max": 749,
+      "legacy_filename": "in_600_meters.ogg",
+      "new_id": 51
+    },
+    {
+      "legacy_min": 750,
+      "legacy_max": 949,
+      "legacy_filename": "in_800_meters.ogg",
+      "new_id": 53
+    },
+    {
+      "legacy_min": 280,
+      "legacy_max": 369,
+      "legacy_filename": "in_300_meters.ogg",
+      "new_id": 38
     }
   ]
 }
