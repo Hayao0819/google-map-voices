@@ -9,7 +9,7 @@ if [[ -z "$messages_xml" ]]; then
 	exit 1
 fi
 
-output_json="${2-"${script_dir}/../data/voices_template.json"}"
+output_json="${2-"${script_dir}/../../data/voices_template.json"}"
 
 if ! which xmllint >/dev/null 2>&1; then
 	echo "xmllint is required. Please install it."
