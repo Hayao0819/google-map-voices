@@ -27,8 +27,10 @@ ids=()
 #   }[]
 fetch_voices() {
 	local _page=${1-"1"} _order=${2-"time"}
+	local script_dir
+	script_dir=$(cd "$(dirname "${0}")" && pwd)
 
-	curl -s "http://nvc.nekoteki.jp/navi_voices.json?page=$_page&order=$_order"
+	"${script_dir}/../lib/fetch.sh" -s "http://nvc.nekoteki.jp/navi_voices.json?page=$_page&order=$_order"
 }
 
 calc_pages_count() {
