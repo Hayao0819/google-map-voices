@@ -11,4 +11,6 @@ dependencies = [
     "voicevox-core @ https://github.com/VOICEVOX/voicevox_core/releases/download/0.16.1/voicevox_core-0.16.1-cp310-abi3-macosx_11_0_arm64.whl; sys_platform == 'darwin' and platform_machine == 'arm64'",
     "voicevox-core @ https://github.com/VOICEVOX/voicevox_core/releases/download/0.16.1/voicevox_core-0.16.1-cp310-abi3-manylinux_2_34_x86_64.whl; sys_platform == 'linux' and platform_machine == 'x86_64'",
     "voicevox-core @ https://github.com/VOICEVOX/voicevox_core/releases/download/0.16.1/voicevox_core-0.16.1-cp310-abi3-manylinux_2_34_aarch64.whl; sys_platform == 'linux' and platform_machine == 'aarch64'",
+    "types-jsonschema>=4.25.1.20250822",
+    "jsonschema>=4.25.1",
 ]

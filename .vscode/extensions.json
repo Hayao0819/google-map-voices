@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ms-python.black-formatter",
+    "ms-python.python",
+    "ms-python.mypy-type-checker",
+    "mkhl.shfmt",
+    "timonwong.shellcheck"
+  ]
+}
