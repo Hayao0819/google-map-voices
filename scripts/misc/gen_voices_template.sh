@@ -38,13 +38,31 @@ while read -r id; do
 	json_lines+=("$(printf "$json_line_template" "$filename" "$id")")
 done < <(get_ids)
 
-
-json_output=$(jq -n \
-    --argjson data "$(jq -n \
-        --slurpfile lines <(printf "%s\n" "${json_lines[@]}") \
-        '$lines'
-    )" \
-    '{"voices":{"base":$data, "override":{"kiritan":[], "ttchan":[]}}}'
+# Create the base instructions array
+base_instructions=$(
+	jq -n \
+		--slurpfile lines <(printf "%s\n" "${json_lines[@]}") \
+		'$lines'
 )
 
-echo "$json_output" | jq '.' > "$output_json"
+# Generate the complete JSON structure according to voices_schema.json
+json_output=$(
+	jq -n \
+		--argjson base_data "$base_instructions" \
+		'{
+        "$schema": "./voices_schema.json",
+        "voices": [
+            {
+                "name": "template_voice",
+                "source": "template.sh",
+                "command": ["template", "%TEXT%", "%OUTPUT_PATH%"]
+            }
+        ],
+        "instructions": {
+            "base": $base_data,
+            "override": {}
+        }
+    }'
+)
+
+echo "$json_output" | jq '.' >"$output_json"

@@ -60,7 +60,7 @@ main() {
 	json_by_id=$(
 		xmllint --xpath '/voice_instructions/maneuver_message' "$messages_xml" 2>/dev/null |
 			grep -oE '<maneuver_message[^>]*>' |
-			sed -E 's/.*id="([0-9]+)".*/{"legacy_id": \1}/' |
+			sed -E 's/.*id="([0-9]+)".*/{"legacy_id": \1, "legacy_filename": null, "new_id": null, "memo": null}/' |
 			jq -s '.'
 	)
 
@@ -69,7 +69,7 @@ main() {
 	json_by_type=$(
 		xmllint --xpath '/voice_instructions/predefined_message' "$messages_xml" 2>/dev/null |
 			grep -oE '<predefined_message[^>]*>' |
-			sed -E 's/.*type="([^"]+)".*/{"legacy_type": "\1"}/' |
+			sed -E 's/.*type="([^"]+)".*/{"legacy_type": "\1", "new_id": 0}/' |
 			jq -s '.'
 	)
 
@@ -78,7 +78,7 @@ main() {
 	json_by_range=$(
 		xmllint --xpath '/voice_instructions/distance_message' "$messages_xml" 2>/dev/null |
 			grep -oE '<distance_message[^>]*>' |
-			sed -E 's/.*min="([0-9]+)".*max="([0-9]+)".*/{"legacy_min": \1, "legacy_max": \2}/' |
+			sed -E 's/.*min="([0-9]+)".*max="([0-9]+)".*/{"legacy_min": \1, "legacy_max": \2, "legacy_filename": null, "new_id": null}/' |
 			jq -s '.'
 	)
 
@@ -88,6 +88,7 @@ main() {
 		--argjson type_arr "$json_by_type" \
 		--argjson range_arr "$json_by_range" '
       {
+        "$schema": "./legacy_schema.json",
         "by_id": ($id_arr | sort_by(.legacy_id)),
         "by_type": $type_arr,
         "by_range": $range_arr

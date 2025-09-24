@@ -8,7 +8,7 @@
 
 セリフと合成音声エンジンの設定です。実質これが本体です。
 
-スキーマについては時間があるときに文書化します。`voices.override`は気が向いたら実装しますが現時点では全て無視されます。
+スキーマは[`voices_schema.json`](./voices_schema.json)を参照してください。テンプレートを[`gen_voices_template.sh`](../scripts/misc/gen_voices_template.sh)で生成できます。
 
 ## `messages.plist` / `messages.xml`
 
@@ -23,3 +23,5 @@
 古のGoogle MapでのIDと2025年9月17日現在での音声データのIDの対応表です。
 
 今後このデータをもとにデータをマイグレーションするスクリプトを実装予定です。
+
+スキーマは[`legacy_schema.json`](./legacy_schema.json)を参照してください。テンプレートを[`gen_legacy_template.sh`](../scripts/misc/gen_legacy_template.sh)で生成できます。
