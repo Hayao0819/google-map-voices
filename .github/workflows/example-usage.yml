@@ -1,0 +1,40 @@
+# Example workflow showing how to use the setup-project action
+# This file demonstrates usage and can be used as a template for other workflows
+
+name: Example Usage
+
+on:
+  workflow_dispatch:
+
+jobs:
+  example-with-system-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup project with system packages
+        uses: ./.github/actions/setup-project
+        # Uses default: install-system-packages = true
+
+      - name: Run some commands that need system packages
+        run: |
+          xmllint --version
+          jq --version
+          uv --version
+
+  example-without-system-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup project without system packages
+        uses: ./.github/actions/setup-project
+        with:
+          install-system-packages: "false"
+
+      - name: Run Python-only commands
+        run: |
+          uv --version
+          uv run python --version

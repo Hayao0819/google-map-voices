@@ -1,0 +1,27 @@
+name: "Setup Project Dependencies"
+description: "Set up uv, Python environment, and system dependencies for google-map-voices project"
+
+inputs:
+  install-system-packages:
+    description: "Whether to install system packages (libxml2-utils, jq)"
+    required: false
+    default: "true"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+      with:
+        version: "latest"
+
+    - name: Set up Python environment
+      shell: bash
+      run: ./scripts/misc/setup_python.sh
+
+    - name: Install required system packages
+      if: inputs.install-system-packages == 'true'
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libxml2-utils jq

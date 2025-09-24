@@ -1,0 +1,79 @@
+name: JSON Schema Validation
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "scripts/misc/gen_*.sh"
+      - "data/*_schema.json"
+      - "data/messages.xml"
+      - "data/legacy_messages.xml"
+  pull_request:
+    branches: [master]
+    paths:
+      - "scripts/misc/gen_*.sh"
+      - "data/*_schema.json"
+      - "data/messages.xml"
+      - "data/legacy_messages.xml"
+  workflow_dispatch:
+
+jobs:
+  validate-legacy-schema:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup project dependencies
+        uses: ./.github/actions/setup-project
+
+      - name: Generate legacy template JSON
+        run: |
+          ./scripts/misc/gen_legacy_template.sh data/legacy_messages.xml /tmp/generated_legacy.json
+
+      - name: Validate legacy JSON against schema
+        run: |
+          cd data
+          ../scripts/lib/test-json-schema.sh legacy_schema.json /tmp/generated_legacy.json
+
+      - name: Validate existing legacy JSON file
+        run: |
+          cd data
+          ../scripts/lib/test-json-schema.sh legacy_schema.json legacy.json
+
+      - name: Display generated legacy file info
+        if: always()
+        run: |
+          echo "=== Generated Legacy JSON ==="
+          ls -la /tmp/generated_legacy.json || echo "File not found"
+
+  validate-voices-schema:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup project dependencies
+        uses: ./.github/actions/setup-project
+
+      - name: Generate voices template JSON
+        run: |
+          ./scripts/misc/gen_voices_template.sh data/messages.xml /tmp/generated_voices.json
+
+      - name: Validate voices JSON against schema
+        run: |
+          cd data
+          ../scripts/lib/test-json-schema.sh voices_schema.json /tmp/generated_voices.json
+
+      - name: Validate existing voices JSON file
+        run: |
+          cd data
+          ../scripts/lib/test-json-schema.sh voices_schema.json voices.json
+
+      - name: Display generated voices file info
+        if: always()
+        run: |
+          echo "=== Generated Voices JSON ==="
+          ls -la /tmp/generated_voices.json || echo "File not found"
