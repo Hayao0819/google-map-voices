@@ -87,8 +87,12 @@ Examples:
         print(f"ERROR: JSON file not found: {json_file}", file=sys.stderr)
         sys.exit(1)
 
-    # Look for schema file in the same directory as JSON file
-    schema_file = json_file.parent / args.schema
+    # Schema file can be absolute path or relative to JSON file directory
+    if Path(args.schema).is_absolute():
+        schema_file = Path(args.schema)
+    else:
+        schema_file = json_file.parent / args.schema
+
     if not schema_file.exists():
         print(f"ERROR: Schema file not found: {schema_file}", file=sys.stderr)
         sys.exit(1)

@@ -34,13 +34,11 @@ jobs:
 
       - name: Validate legacy JSON against schema
         run: |
-          cd data
-          ../scripts/lib/test-json-schema.sh legacy_schema.json /tmp/generated_legacy.json
+          ./scripts/lib/test-json-schema.sh $(pwd)/data/legacy_schema.json /tmp/generated_legacy.json
 
       - name: Validate existing legacy JSON file
         run: |
-          cd data
-          ../scripts/lib/test-json-schema.sh legacy_schema.json legacy.json
+          ./scripts/lib/test-json-schema.sh $(pwd)/data/legacy_schema.json $(pwd)/data/legacy.json
 
       - name: Display generated legacy file info
         if: always()
@@ -64,13 +62,11 @@ jobs:
 
       - name: Validate voices JSON against schema
         run: |
-          cd data
-          ../scripts/lib/test-json-schema.sh voices_schema.json /tmp/generated_voices.json
+          ./scripts/lib/test-json-schema.sh $(pwd)/data/voices_schema.json /tmp/generated_voices.json
 
       - name: Validate existing voices JSON file
         run: |
-          cd data
-          ../scripts/lib/test-json-schema.sh voices_schema.json voices.json
+          ./scripts/lib/test-json-schema.sh $(pwd)/data/voices_schema.json $(pwd)/data/voices.json
 
       - name: Display generated voices file info
         if: always()
