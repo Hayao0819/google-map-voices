@@ -5,7 +5,7 @@ set -eEuo pipefail
 script_dir=$(cd "$(dirname "${0}")" && pwd)
 export GMV_CORE_DIR="${script_dir}/../core"
 
-target_charactor=""
+target_character=""
 target_id=()
 output_dir=""
 voices_json_path="$script_dir/../data/voices.json"
@@ -49,9 +49,9 @@ function init() {
 
 	shift $((OPTIND - 1))
 
-	target_charactor="${1:-}"
+	target_character="${1:-}"
 	output_dir="${2:-}"
-	if [[ -z "$output_dir" ]] || [[ -z "$target_charactor" ]]; then
+	if [[ -z "$output_dir" ]] || [[ -z "$target_character" ]]; then
 		usage
 		return 1
 	fi
@@ -65,7 +65,7 @@ function parse_voices_json() {
 
 	# override があればマージ
 	local _override=()
-	readarray -t _override < <(jq -c --arg name "$target_charactor" '.instructions.override[$name][]?' "$voices_json_path" || true)
+	readarray -t _override < <(jq -c --arg name "$target_character" '.instructions.override[$name][]?' "$voices_json_path" || true)
 
 	if ((${#_override[@]} > 0)); then
 		# id ごとに base を差し替える
@@ -190,7 +190,7 @@ function main() {
 		(
 			# サブシェル内で実行
 			set -eEuo pipefail
-			call_charactor "$target_charactor" "$_text" "$_output_path"
+			call_charactor "$target_character" "$_text" "$_output_path"
 			echo "Generated id $_id: $_text -> $_output_path"
 		) &
 
