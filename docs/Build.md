@@ -6,7 +6,8 @@
 
 ```bash
 cd scripts/misc
-./setup.sh
+./setup_voicevox.sh
+./setup_python.sh
 ```
 
 ## ビルド開始
