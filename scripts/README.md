@@ -26,7 +26,7 @@
 
 ### `main.sh`
 
-`gen.sh`と`convert.sh`を用いて音声ファイルを生成した後、必要なファイルを追加・圧縮して`voice_instructions_unitless.zip`を作成します。
+`gen.sh`と`convert_mp3.sh`を用いて音声ファイルを生成した後、必要なファイルを追加・圧縮して`voice_instructions_unitless.zip`を作成します。
 
 単に`voice_instructions_unitless.zip`をビルドしたい場合はこのスクリプトを実行してください。
 
